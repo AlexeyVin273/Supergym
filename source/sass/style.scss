@@ -4,6 +4,8 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/modules/navigation/navigation';
 
 // Global
 // ---------------------------------
@@ -19,7 +21,19 @@
 // ---------------------------------
 
 @import "blocks/btn";
-@import "blocks/modal";
+@import "blocks/main-header";
+@import "blocks/main-nav";
+@import "blocks/logo-link";
+@import "blocks/main-index";
+@import "blocks/main-intro";
+@import "blocks/about";
+@import "blocks/season-tickets";
+@import "blocks/tab-tickets";
+@import "blocks/promo";
+@import "blocks/trainers";
+@import "blocks/trainer-card";
+@import "blocks/slider-navigation";
+@import "blocks/feautures";
 
 // ---------------------------------
 

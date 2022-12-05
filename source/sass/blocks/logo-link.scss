@@ -1,0 +1,23 @@
+.logo-link {
+  display: flex;
+  align-items: flex-start;
+
+  color: $color-default-white;
+}
+
+.logo-link[href] {
+  transition: opacity $trans-default;
+
+  @include focus {
+    outline: 2px solid $color-default-white;
+    outline-offset: 2px;
+  }
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: rgba($color: $color-default-white, $alpha: 0.3);
+  }
+}

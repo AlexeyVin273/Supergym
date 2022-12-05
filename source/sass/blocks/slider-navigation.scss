@@ -1,0 +1,52 @@
+.slider-navigation {
+  padding: 5px;
+}
+
+.slider-navigation__button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+
+  width: 16px;
+  height: 32px;
+
+  cursor: pointer;
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  @include hover {
+    & svg path {
+      stroke: $color-sapphire;
+    }
+  }
+
+  @include focus {
+    outline: 1px solid $color-sapphire;
+    outline-offset: 0;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.slider-navigation__button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-navigation__button svg path {
+  stroke: $color-dark-gray;
+
+  transition: stroke $trans-default;
+}

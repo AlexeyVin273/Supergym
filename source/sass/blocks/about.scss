@@ -1,0 +1,282 @@
+.about__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 235px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 183px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 85px;
+  margin-left: 60px;
+
+  @include vp-1199 {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.about__text h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-bottom: 6px;
+
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
+
+    font-size: 32px;
+    line-height: 38px;
+    text-align: left;
+  }
+}
+
+.about__text strong {
+  display: block;
+  margin-bottom: 48px;
+
+  font-size: 18px;
+
+  @include vp-1199 {
+    margin-bottom: 50px;
+
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+
+    text-align: left;
+  }
+}
+
+.about__text p {
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-weight: 300;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include vp-1199 {
+    text-align: center;
+  }
+
+  @include vp-767 {
+    text-align: left;
+  }
+}
+
+.about__text p:not(:first-of-type) {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.about__media {
+  position: relative;
+  flex: 1 0 660px;
+
+  @include vp-1199 {
+    flex: auto;
+  }
+}
+
+.about__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  @include vp-1199 {
+    width: auto;
+  }
+
+  @include vp-767 {
+    max-height: 345px;
+    margin-bottom: 40px;
+  }
+
+  &::before {
+    display: block;
+    padding-top: 60.76%;
+
+    content: "";
+
+    @include vp-1199 {
+      padding-top: 50.88%;
+    }
+
+    @include vp-767 {
+      padding-top: 97.81%;
+    }
+  }
+}
+
+.about__image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about__video {
+  position: absolute;
+  bottom: 0;
+  left: -63px;
+  transform: translate3d(0, 50%, 0);
+
+  width: 364px;
+
+  @include vp-1199 {
+    left: 50%;
+    transform: translate3d(-50%, 50%, 0);
+    width: 39.23%;
+  }
+
+  @include vp-767 {
+    position: relative;
+    transform: none;
+    left: 0;
+    width: 100%;
+  }
+
+  &::before {
+    display: block;
+    padding-top: 62.63%;
+
+    content: "";
+
+    @include vp-767 {
+      padding-top: 52.19%;
+    }
+  }
+}
+
+.about__video video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about__video-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+
+  width: 100px;
+  height: 100px;
+  padding: 14px;
+
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+    background-image: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
+    transition: transform $trans-ease-out;
+
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='15' viewBox='0 0 13 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 7.5L0.249999 14.8612L0.25 0.138783L13 7.5Z' fill='white'/%3E%3C/svg%3E");
+    background-size: 17px 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    content: "";
+  }
+
+  @include hover-focus {
+    &::before {
+      transform: scale(1.2);
+    }
+
+    & circle {
+      stroke-opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.about__video-button svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about__video-button circle {
+  transition: stroke-opacity $trans-default;
+  stroke-opacity: 0.2;
+}
+
+.about__video-button.is-hidden {
+  display: none;
+}

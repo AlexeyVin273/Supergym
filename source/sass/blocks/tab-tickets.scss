@@ -1,0 +1,306 @@
+.tab-tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-tickets__buttons {
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+
+  overflow: hidden;
+
+  @include vp-1199 {
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 25px;
+
+  }
+}
+
+.tab-tickets__list-wrapper {
+  width: 100%;
+  padding-bottom: 10px;
+
+  overflow: auto;
+}
+
+.tab-tickets__buttons-list {
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  font-size: 20px;
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+}
+
+.tab-tickets__buttons-item {
+  &:first-child .tab-tickets__button {
+    padding-left: 0;
+  }
+
+  &:last-child .tab-tickets__button {
+    padding-right: 0;
+  }
+}
+
+.tab-tickets__button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 23px 20px;
+
+  color: rgba($color: $color-sapphire, $alpha: 0.5);
+
+  vertical-align: middle;
+  transition: text-shadow $trans-default;
+
+  @include vp-1199 {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  @include vp-767 {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  @include hover {
+    &:not(.is-active) {
+      text-shadow: 1px 1px 3px rgba($color: $color-sapphire, $alpha: 0.3);;
+    }
+  }
+
+  @include focus {
+    outline: 2px solid rgba($color: $color-sapphire, $alpha: 0.2);
+    outline-offset: -2px;
+  }
+}
+
+.tab-tickets__button.is-active {
+  color: $color-sapphire;
+}
+
+.tab-tickets__buttons-bar {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: rgba($color: $color-grey, $alpha: 0.2);
+}
+
+.tab-tickets__buttons-active {
+  position: absolute;
+  height: 100%;
+  background-color: $color-crimson;
+
+  will-change: width, left;
+  transition:
+    width $trans-ease-out-500,
+    left $trans-ease-out-500;
+}
+
+.tab-tickets__pages {
+  align-self: stretch;
+}
+
+.tab-tickets__page {
+  display: none;
+
+  opacity: 0;
+}
+
+.tab-tickets__page:target,
+.tab-tickets__page.is-active {
+  display: block;
+
+  animation-name: show-tab-page;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.tab-tickets__tickets-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.tab-tickets__tickets-item {
+  padding: 7px;
+  background-color: $color-default-white;
+  width: 100%;
+
+  @include hover-focus {
+    background-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    outline: none;
+
+    & .tab-tickets__page-button {
+      outline: 0;
+      color: $color-default-white;
+      background-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    }
+  }
+
+  @include vp-1199 {
+    max-width: 442px;
+  }
+}
+
+.tab-tickets__ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 61px 70px;
+
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    padding: 48px 35px;
+  }
+}
+
+.tab-tickets__ticket h3 {
+  margin-top: 0;
+  margin-bottom: 22px;
+
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 29px;
+  text-align: center;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.tab-tickets__ticket > b {
+  margin-bottom: 59px;
+
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
+}
+
+.tab-tickets__price {
+  position: relative;
+
+  margin-top: 0;
+  margin-bottom: 59px;
+
+  font-weight: 700;
+  font-size: 60px;
+  color: $color-egyptian-blue;
+  z-index: 1;
+
+  @include vp-1199 {
+    margin-bottom: 54px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 50px;
+
+    font-size: 48px;
+  }
+}
+
+.tab-tickets__price span {
+  position: relative;
+  padding-right: 44px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='42' viewBox='0 0 30 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 17H6V23H0V17Z' fill='%23102654'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z' fill='%23102654'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z' fill='%23102654'/%3E%3C/svg%3E");
+  background-size: 30px 42px;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  z-index: 1;
+}
+
+.tab-tickets__price-smooth {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translate3d(-50%, 0, 0);
+
+  font-size: 100px;
+  color: $color-whisper;
+
+  opacity: 0.48;
+  z-index: 0;
+
+  @include vp-767 {
+    font-size: 80px;
+  }
+}
+
+.tab-tickets__page-button {
+  padding: 25px 27px;
+  min-width: 206px;
+
+  font-weight: 700;
+  color: $color-sapphire;
+
+  border: 0;
+  outline: 2px solid $color-sapphire;
+  outline-offset: -2px;
+
+  transition: box-shadow $trans-default;
+
+  @include vp-767 {
+    align-self: stretch;
+  }
+
+  @include focus {
+    outline: 3px solid rgba($color: $color-default-white, $alpha: 0.5);
+    color: $color-default-white;
+    background-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  }
+
+  @include hover {
+    box-shadow: inset 0 0 30px 1px rgba($color: $color-default-white, $alpha: 0.3),
+    3px 2px 3px 1px rgba($color: $color-sapphire, $alpha: 0.2);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes show-tab-page {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 5%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

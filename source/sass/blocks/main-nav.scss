@@ -1,0 +1,49 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+
+  font-family: $ff-alumni-sans;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 29px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: inherit;
+
+  vertical-align: middle;
+  transition: opacity $trans-default;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include focus {
+    outline: 2px solid $color-default-white;
+    outline-offset: 2px;
+  }
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: rgba($color: $color-default-white, $alpha: 0.3);
+  }
+
+  @include vp-1199 {
+    margin-left: 10px;
+  }
+}

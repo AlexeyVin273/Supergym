@@ -1,0 +1,76 @@
+.season-tickets {
+  position: relative;
+  background-color: $color-ghost-white;
+
+  &::before {
+    position: absolute;
+    left: 84.8%;
+    bottom: -83px;
+    width: 321px;
+    height: 384px;
+
+    transform: rotate(320deg);
+
+
+    background-image: url('../img/bg/plates.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url('../img/bg/plates@2x.png');
+    }
+
+    @include vp-1199 {
+      left: 63%;
+      bottom: -83px;
+      width: 289px;
+      height: 345px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+
+    content: "";
+    z-index: 0;
+  }
+}
+
+.season-tickets__inner {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.season-tickets h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+
+    font-size: 32px;
+    line-height: 38px;
+  }
+}

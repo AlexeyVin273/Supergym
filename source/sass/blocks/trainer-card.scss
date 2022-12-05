@@ -1,0 +1,166 @@
+.trainer-card {
+  position: relative;
+
+  color: $color-default-white;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    padding-top: 113.08%;
+
+    content: "";
+
+    @include vp-1199 {
+      padding-top: 109.7%;
+    }
+
+    @include vp-767 {
+      padding-top: 121.23%;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: $color-sapphire;
+    opacity: 0;
+
+    transition: opacity $trans-ease-out-500;
+    content: "";
+    z-index: 0;
+  }
+
+  @include hover {
+    &::after {
+      opacity: 0.89;
+    }
+
+    & .trainer-card__data {
+      flex-direction: column;
+    }
+
+    & .trainer-card__onhover-info {
+      visibility: visible;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.trainer-card__inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.trainer-card__inner img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainer-card h3 {
+  flex-grow: 0;
+  margin-bottom: 0;
+  margin-top: 30px;
+
+  font-weight: 700;
+  font-size: 18px;
+
+  @include vp-767 {
+    margin-top: 18px;
+  }
+}
+
+.trainer-card b {
+  margin-bottom: 35px;
+
+  color: $color-spindle;
+}
+
+.trainer-card__data {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  z-index: 1;
+
+  @include vp-767 {
+    padding: 20px;
+  }
+}
+
+.trainer-card__onhover-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  opacity: 0;
+  transform: translate3d(0, 5%, 0);
+  visibility: hidden;
+  transition:
+    opacity $trans-ease-out-500,
+    transform $trans-ease-out-500;
+
+  overflow: hidden;
+}
+
+.trainer-card__data-list {
+  flex-basis: 120px;
+  flex-grow: 1;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  padding-left: 25px;
+
+  font-size: 14px;
+  overflow-y: auto;
+
+  @include vp-767 {
+    padding-left: 18px;
+  }
+}
+
+.trainer-card__data-list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    margin-right: 10px;
+
+    border-radius: 50%;
+    background-color: $color-default-white;
+
+    content: "";
+  }
+}
