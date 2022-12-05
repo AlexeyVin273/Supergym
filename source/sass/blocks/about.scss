@@ -157,6 +157,10 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+
+  @include vp-767 {
+
+  }
 }
 
 .about__video {

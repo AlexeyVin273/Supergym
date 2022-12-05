@@ -25,4 +25,16 @@ const swiper = new Swiper('.trainers__slider', {
   },
 });
 
-export {swiper};
+const carousel = new Swiper('.reviews__slider', {
+  modules: [Navigation],
+  slidesPerView: 1,
+  spaceBetween: 30,
+  speed: 700,
+
+  navigation: {
+    nextEl: '.reviews__slider-button--next',
+    prevEl: '.reviews__slider-button--prev',
+  },
+});
+
+export {swiper, carousel};

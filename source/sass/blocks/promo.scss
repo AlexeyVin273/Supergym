@@ -17,7 +17,6 @@
 
   &::after {
     flex: 1 1 660px;
-    display: block;
 
     background-image: url('../../img/bg/promo-bg-desktop.jpg');
     background-repeat: no-repeat;
@@ -25,6 +24,10 @@
     background-position: center;
 
     content: "";
+
+    @include retina {
+      background-image: url('../../img/bg/promo-bg-desktop@2x.jpg');
+    }
 
     @include vp-767 {
       flex: auto;
