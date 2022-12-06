@@ -78,7 +78,7 @@
 
   @include hover {
     &:not(.is-active) {
-      text-shadow: 1px 1px 3px rgba($color: $color-sapphire, $alpha: 0.3);;
+      text-shadow: 3px 3px 3px rgba($color: $color-sapphire, $alpha: 0.3);
     }
   }
 
@@ -150,41 +150,35 @@
 }
 
 .tab-tickets__tickets-item {
-  padding: 7px;
-  background-color: $color-default-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 61px 70px;
   width: 100%;
 
+  background-color: $color-default-white;
+  border: 7px solid $color-default-white;
+
   @include hover-focus {
-    background-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
-    outline: none;
+    border-image: $gradient-border 1;
 
     & .tab-tickets__page-button {
-      outline: 0;
+      outline: none;
       color: $color-default-white;
-      background-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+      background-image: $gradient-button;
     }
   }
 
   @include vp-1199 {
     max-width: 442px;
   }
-}
-
-.tab-tickets__ticket {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 61px 70px;
-
-  background-color: $color-default-white;
 
   @include vp-767 {
     padding: 48px 35px;
   }
 }
 
-.tab-tickets__ticket h3 {
+.tab-tickets__tickets-item h3 {
   margin-top: 0;
   margin-bottom: 22px;
 
@@ -201,7 +195,7 @@
   }
 }
 
-.tab-tickets__ticket > b {
+.tab-tickets__tickets-item > b {
   margin-bottom: 59px;
 
   @include vp-767 {
@@ -263,6 +257,7 @@
 .tab-tickets__page-button {
   padding: 25px 27px;
   min-width: 206px;
+  margin-top: auto;
 
   font-weight: 700;
   color: $color-sapphire;
@@ -280,7 +275,7 @@
   @include focus {
     outline: 3px solid rgba($color: $color-default-white, $alpha: 0.5);
     color: $color-default-white;
-    background-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    background-image: $gradient-button;
   }
 
   @include hover {

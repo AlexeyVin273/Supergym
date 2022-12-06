@@ -234,7 +234,7 @@
   padding: 28px;
 
   border: 7px solid $color-torch-red;
-  border-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%) 1;
+  border-image: $gradient-border 1;
 
   &:last-child {
     margin: 0;

@@ -1,5 +1,5 @@
 .main-intro {
-  background-image: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background-image: $gradient-intro;
   color: $color-default-white;
 }
 
@@ -24,13 +24,14 @@
 
 .main-intro__image {
   position: relative;
-  flex: 0 1 500px;
+  flex: 1 0 500px;
   height: auto;
 
   @include vp-1199 {
     flex-basis: 324px;
     flex-grow: 1;
     overflow: hidden;
+    max-width: 400px;
   }
 
   @include vp-767 {
@@ -61,24 +62,25 @@
 }
 
 .main-intro__text-content {
-  flex: 1 1 325px;
+  flex-grow: 1;
+  flex-shrink: 1;
   display: grid;
-  grid-template-columns: 98px 50px 248px;
+  grid-template-columns: auto 50px 1fr;
   grid-template-rows: min-content 117px min-content;
 
   margin-right: 64px;
   padding-top: 121px;
 
   @include vp-1199 {
-    grid-template-columns: 92px 45px calc(187px + 58 * (100vw - 768px) / (1200 - 768));
-    grid-template-rows: min-content 95px min-content;
+    grid-template-columns: 0.5fr 45px 1fr;
+    grid-template-rows: min-content 75px min-content;
 
     margin-right: 30px;
     padding-top: 57px;
   }
 
   @include vp-767 {
-    grid-template-columns: auto 80px 35px minmax(176px, 213px) auto;
+    grid-template-columns: auto 35px 1fr;
     grid-template-rows: min-content 77px min-content;
     margin-right: 0;
     padding-top: 35px;
@@ -91,7 +93,6 @@
 
   margin: 0;
   margin-bottom: 60px;
-  max-width: 300px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
@@ -114,8 +115,8 @@
   @include vp-1199 {
     margin-bottom: 45px;
 
-    font-size: calc(72px + 20 * (100vw - 768px) / (1200 - 768));
-    line-height: calc(86px + 22 * (100vw - 768px) / (1200 - 768));;
+    font-size: 72px;
+    line-height: 86px;
 
     text-transform: none;
     text-shadow:
@@ -130,7 +131,6 @@
   }
 
   @include vp-767 {
-    grid-column: 3 / 5;
     margin-bottom: 25px;
 
     font-size: 72px;
@@ -165,7 +165,6 @@
   }
 
   @include vp-767 {
-    grid-column: 4 / 5;
     margin-bottom: 12px;
 
     font-size: 28px;
@@ -191,9 +190,9 @@
   }
 
   @include vp-767 {
-    grid-column: 2 / 4;
     margin-right: 0;
     margin-top: 0;
+    margin-bottom: 25px;
   }
 }
 
@@ -207,12 +206,12 @@
   grid-row: 4 / 5;
   align-self: start;
   justify-self: end;
-
   min-width: 230px;
 
   transition: background-color $trans-default;
 
   @include vp-1199 {
+    width: auto;
     min-width: 183px;
   }
 

@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initVideo} from './modules/video';
 import {initTicketsTab} from './modules/season-tickets';
+import {initForm} from './modules/form-signup';
 import './modules/sliders';
 
 // ---------------------------------
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initVideo();
   initTicketsTab();
+  initForm();
 });
 
 // ---------------------------------

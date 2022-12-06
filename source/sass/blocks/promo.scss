@@ -25,28 +25,43 @@
 
     content: "";
 
-    @include retina {
-      background-image: url('../../img/bg/promo-bg-desktop@2x.jpg');
+    @include vp-1199 {
+      // flex: 1 1 386px;
     }
 
     @include vp-767 {
       flex: auto;
       width: 100%;
-      padding-top: 100%;
+      padding-top: 100.69%;
+      background-image: url('../../img/bg/promo-bg-mobile.jpg');
+    }
+
+    @include retina {
+      @media (max-width: ($vp-768 - 1px)) {
+        background-image: url('../../img/bg/promo-bg-mobile@2x.jpg');
+      }
+
+      @media (min-width: $vp-768) {
+        background-image: url('../../img/bg/promo-bg-desktop@2x.jpg');
+      }
     }
   }
 }
 
 .promo__info {
-  position: relative;
+  // position: relative;
   flex: 1 1 500px;
 
-  &::before {
-    display: block;
-    padding-top: 100%;
+  // &::before {
+  //   display: block;
+  //   padding-top: 100%;
 
-    content: "";
-  }
+  //   content: "";
+
+  //   @include vp-767 {
+  //     display: none;
+  //   }
+  // }
 
   @include vp-767 {
     flex: auto;
@@ -55,15 +70,17 @@
 }
 
 .promo__info-content {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  // position: absolute;
+  // position: relative;
+  // left: 0;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  min-height: 500px;
 
   display: grid;
-  grid-template-columns: auto min-content min-content auto;
-  grid-template-rows: min-content;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: repeat(3, auto) 1fr;
   align-content: center;
 
   padding: 86px 79px;
@@ -72,12 +89,19 @@
   color: $color-default-white;
 
   @include vp-1199 {
-    padding: 45px 50px;
+    padding: 42.5px 50px;
+    min-height: 292px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    padding: 50px 44px;
+
   }
 }
 
 .promo__info h2 {
-  grid-column: 2 / 3;
+  grid-column: 1 / 2;
   grid-row: 1 / 3;
 
   margin: 0;
@@ -89,17 +113,10 @@
   font-size: 82px;
   line-height: 96%;
   letter-spacing: 0.03em;
-  text-align: center;
   text-transform: uppercase;
 
   @include vp-1199 {
     margin-right: 30px;
-    margin-bottom: calc(14px + 21 * (100vw - 768px) / (1200 - 768));
-
-    font-size: calc(48px + 34 * (100vw - 768px) / (1200 - 768));
-  }
-
-  @include vp-767 {
     margin-bottom: 14px;
 
     font-size: 48px;
@@ -107,7 +124,7 @@
 }
 
 .promo__info p {
-  grid-column: 2 / 4;
+  grid-column: 1 / 3;
   grid-row: 3 / 4;
 
   margin-top: 0;
@@ -116,14 +133,14 @@
   font-size: 18px;
 
   @include vp-1199 {
-    margin-bottom: 36px;
+    margin-bottom: 27px;
 
     font-size: 12px;
   }
 }
 
 .promo__options-list {
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
   grid-row: 1 / 3;
 
   margin: 0;
@@ -134,7 +151,7 @@
   flex-direction: column;
 
   @include vp-1199 {
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
 }
 
@@ -178,7 +195,6 @@
 
   @include vp-1199 {
     padding-top: 3px;
-    row-gap: calc(0px + 7 * (100vw - 768px) / (1200 - 768));
   }
 
   @include vp-767 {
@@ -195,10 +211,6 @@
   line-height: 1;
 
   @include vp-1199 {
-    font-size: calc(24px + 16 * (100vw - 768px) / (1200 - 768));
-  }
-
-  @include vp-767 {
     font-size: 24px;
   }
 }
@@ -209,20 +221,17 @@
   font-size: 14px;
 
   @include vp-1199 {
-    font-size: calc(10px + 4 * (100vw - 768px) / (1200 - 768));
-    line-height: 1;
-  }
-
-  @include vp-767 {
     font-size: 10px;
+    line-height: 1;
   }
 }
 
 .promo__button {
-  grid-column: 1 / 5;
+  grid-column: 1 / -1;
   grid-row: 4 / 5;
 
   padding: 23px;
+  margin-top: auto;
 
   font-weight: 700;
 

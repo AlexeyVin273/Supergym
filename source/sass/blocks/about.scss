@@ -228,7 +228,7 @@
     height: 100%;
 
     border-radius: 50%;
-    background-image: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
+    background-image: $gradient-play-button;
     transition: transform $trans-ease-out;
 
     content: "";
@@ -241,12 +241,22 @@
     width: 100%;
     height: 100%;
 
-    background-image: url("data:image/svg+xml,%3Csvg width='13' height='15' viewBox='0 0 13 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 7.5L0.249999 14.8612L0.25 0.138783L13 7.5Z' fill='white'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 7.5L0.249999 14.8612L0.25 0.138783L13 7.5Z' fill='white'/%3E%3C/svg%3E");
     background-size: 17px 17px;
     background-repeat: no-repeat;
     background-position: center;
 
     content: "";
+
+    @include vp-1199 {
+      background-size: 12px 12px;
+    }
+  }
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+    padding: 10px;
   }
 
   @include hover-focus {

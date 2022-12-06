@@ -1,0 +1,143 @@
+.signup {
+  flex-grow: 1;
+  background-color: $color-sapphire;
+  color: $color-default-white;
+}
+
+.signup__inner {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 600px;
+  margin-left: auto;
+  padding: 56px 170px 70px 20px;
+  height: 100%;
+
+  @include vp-1199 {
+    max-width: 100%;
+    padding: 70px 163px 70px 133px;
+    margin-right: auto;
+  }
+
+  @include vp-767 {
+    padding: 70px 15px;
+  }
+}
+
+.signup h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 84px;
+  letter-spacing: 0.03em;
+
+  text-shadow:
+  0.5px 0.5px $color-default-white,
+  -0.5px -0.5px $color-default-white,
+  0.5px -0.5px $color-default-white,
+  -0.5px 0.5px $color-default-white;
+
+  @include vp-1199 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    text-shadow: none;
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.signup__form {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 30px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 30px 0;
+  }
+}
+
+.signup__form input[type="text"],
+.signup__form input[type="tel"] {
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1px solid $color-light-slate-grey;
+  background-color: transparent;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+
+  &:focus {
+    border-color: $color-default-white;
+    outline: none;
+  }
+}
+
+.signup__form input[type="tel"]::-webkit-input-placeholder,
+.signup__form input[type="text"]::-webkit-input-placeholder,
+.signup__form input[type="email"]::-webkit-input-placeholder {
+  color: $color-default-white;
+}
+
+.signup__form input[type="tel"].error,
+.signup__form input[type="text"].error,
+.signup__form input[type="email"].error,
+.signup__form__checkbox > input[type="checkbox"].error + span {
+  border: 1px solid $color-torch-red;
+}
+
+.signup__form button {
+  grid-column: 1 / -1;
+  margin-top: auto;
+
+  display: inline-flex;
+  padding: 14px;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-default-white;
+
+  background-color: transparent;
+
+  border: 3px solid $color-default-white;
+  cursor: pointer;
+  transition: box-shadow $trans-default;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    box-shadow: inset 0 0 50px 0 rgba($color: $color-default-white, $alpha: 0.3);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}

@@ -1,0 +1,55 @@
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.social__item {
+  margin-left: 11px;
+
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-right: 11px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+}
+
+.social__link {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  background-color: $color-default-white;
+  border-radius: 50%;
+  color: inherit;
+  transition: transform $trans-default;
+
+  @include hover-focus {
+    transform: scale(1.2);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
