@@ -40,7 +40,7 @@
 
   &::before {
     display: block;
-    padding-top: 112%;
+    padding-top: 111.2%;
 
     content: "";
 
@@ -66,7 +66,7 @@
   flex-shrink: 1;
   display: grid;
   grid-template-columns: auto 50px 1fr;
-  grid-template-rows: min-content 117px min-content;
+  grid-template-rows: min-content 120px min-content;
 
   margin-right: 64px;
   padding-top: 121px;
@@ -76,14 +76,14 @@
     grid-template-rows: min-content 75px min-content;
 
     margin-right: 30px;
-    padding-top: 57px;
+    padding-top: 53px;
   }
 
   @include vp-767 {
     grid-template-columns: auto 35px 1fr;
     grid-template-rows: min-content 77px min-content;
     margin-right: 0;
-    padding-top: 35px;
+    padding-top: 31px;
   }
 }
 
@@ -92,12 +92,12 @@
   grid-row: 2 / 4;
 
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 49px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
   font-size: 92px;
-  line-height: 108px;
+  line-height: 109px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: right;
@@ -113,21 +113,21 @@
     -2px 2px $color-default-white;
 
   @include vp-1199 {
-    margin-bottom: 45px;
+    margin-bottom: 37px;
 
     font-size: 72px;
     line-height: 86px;
 
     text-transform: none;
     text-shadow:
-    1px 0 $color-default-white,
-    -1px 0 $color-default-white,
-    0 1px $color-default-white,
-    0 -1px $color-default-white,
-    1.5px 1.5px $color-default-white,
-    -1.5px -1.5px $color-default-white,
-    1.5px -1.5px $color-default-white,
-    -1.5px 1.5px $color-default-white;
+      1px 0 $color-default-white,
+      -1px 0 $color-default-white,
+      0 1px $color-default-white,
+      0 -1px $color-default-white,
+      1.5px 1.5px $color-default-white,
+      -1.5px -1.5px $color-default-white,
+      1.5px -1.5px $color-default-white,
+      -1.5px 1.5px $color-default-white;
   }
 
   @include vp-767 {
@@ -144,32 +144,32 @@
 
   display: inline-block;
   margin-right: 50px;
-  margin-bottom: 14px;
+  margin-bottom: 26px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
   font-size: 48px;
-  line-height: 48px;
+  line-height: 38px;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   text-align: right;
 
   vertical-align: middle;
 
   @include vp-1199 {
     margin-right: 0;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 
     font-size: 34px;
     line-height: 34px;
+    letter-spacing: 0.07em;
   }
 
   @include vp-767 {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 
     font-size: 28px;
     line-height: 28px;
-
   }
 }
 
@@ -181,12 +181,11 @@
   margin: 0;
   list-style-type: none;
 
-  margin-right: 16px;
+  margin-left: 19px;
   margin-bottom: 20px;
 
   @include vp-1199 {
-    margin-right: 21px;
-    margin-top: 2vw;
+    margin: 15px 24px 0 0;
   }
 
   @include vp-767 {
@@ -206,13 +205,13 @@
   grid-row: 4 / 5;
   align-self: start;
   justify-self: end;
-  min-width: 230px;
+  min-width: 234px;
 
   transition: background-color $trans-default;
 
   @include vp-1199 {
     width: auto;
-    min-width: 183px;
+    min-width: 185px;
   }
 
   @include vp-767 {

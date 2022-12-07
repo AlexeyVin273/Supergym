@@ -6,7 +6,7 @@
   font-size: 26px;
   line-height: 31px;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: $color-default-white;
 
   @include vp-1199 {
@@ -14,6 +14,11 @@
     line-height: 29px;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -45,5 +50,7 @@
 
   @include vp-1199 {
     margin-left: 10px;
+
+    letter-spacing: 0.01em;
   }
 }

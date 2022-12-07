@@ -1,17 +1,17 @@
 .trainers {
-  margin-bottom: 120px;
+  margin-bottom: 121px;
 
   @include vp-1199 {
     margin-bottom: 100px;
   }
 
   @include vp-767 {
-    margin-bottom: 80px;
+    margin-bottom: 69px;
   }
 }
 
 .trainers__inner {
-  max-width: 1312px;
+  max-width: 1317px;
 
   @include vp-1199 {
     max-width: 1160px;
@@ -21,7 +21,7 @@
 .trainers h2 {
   margin-top: 0;
   margin-bottom: 48px;
-  padding: 0 56px;
+  padding: 0 62px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
@@ -31,6 +31,7 @@
 
   @include vp-1199 {
     margin-bottom: 32px;
+    margin-right: 5px;
     padding: 0 32px;
 
     font-size: 42px;
@@ -39,7 +40,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 42px;
 
     font-size: 32px;
     line-height: 38px;
@@ -48,7 +49,11 @@
 
 .trainers__slider-wrapper {
   position: relative;
-  padding: 0 56px;
+  padding: 0 59px;
+
+  @include vp-1199 {
+    padding: 0 56px;
+  }
 
   @include vp-767 {
     padding: 0 32px;

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание проекта">
     <title>Supergym</title>
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -66,7 +65,7 @@
             <div class="about__text">
               <h2>Тренажерный зал</h2>
               <strong>Просторный зал площадью 900&nbsp;кв/м</strong>
-              <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+              <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для&nbsp;укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
               <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
             </div>
             <div class="about__media">
@@ -80,15 +79,19 @@
                 </picture>
               </div>
               <div class="about__video">
-                <video src="media/about.mp4" poster="img/main/gym-preview.jpg" width="364" height="228" preload="none"></video>
+                <video poster="img/main/gym-preview.jpg" width="364" height="228" preload="none">
+                  <source src="media/about-video.webm" type="video/webm">
+                  <source src="media/about-video.mp4" type="video/mp4">
+                </video>
 
                 <a class="about__video-button" href="media/about.mp4" target="_blank">
+                  <span class="visually-hidden">Запустить видео</span>
                   <!-- Можно поместить svg в css, но в этом случае не получится менять прозрачность при наведении -->
                   <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="49" stroke="url(#video-button-gradient)" stroke-width="2"/>
                     <defs>
                       <linearGradient id="video-button-gradient" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#ed0233"/>
+                        <stop stop-color="#ed0233" offset="0"/>
                         <stop offset="1" stop-color="#003eb7"/>
                       </linearGradient>
                     </defs>
@@ -261,7 +264,7 @@
             <div class="trainers__slider-wrapper">
               <div class="trainers__slider swiper">
                 <ul class="trainers__sliders-list swiper-wrapper">
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-01.webp 1x, img/trainers/trainer-01@2x.webp 2x">
@@ -282,7 +285,7 @@
                     </div>
 
                   </li>
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-02.webp 1x, img/trainers/trainer-02@2x.webp 2x">
@@ -302,7 +305,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-03.webp 1x, img/trainers/trainer-03@2x.webp 2x">
@@ -322,7 +325,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-04.webp 1x, img/trainers/trainer-04@2x.webp 2x">
@@ -342,7 +345,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-02.webp 1x, img/trainers/trainer-02@2x.webp 2x">
@@ -362,7 +365,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-04.webp 1x, img/trainers/trainer-04@2x.webp 2x">
@@ -382,7 +385,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-01.webp 1x, img/trainers/trainer-01@2x.webp 2x">
@@ -402,7 +405,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-02.webp 1x, img/trainers/trainer-02@2x.webp 2x">
@@ -422,7 +425,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="trainers__sliders-item trainer-card swiper-slide">
+                  <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
                     <div class="trainer-card__inner">
                       <picture>
                         <source type="image/webp" srcset="img/trainers/trainer-04.webp 1x, img/trainers/trainer-04@2x.webp 2x">
@@ -446,12 +449,14 @@
               </div>
 
               <div class="trainers__slider-navigation slider-navigation">
-                <button class="trainers__slider-button slider-navigation__button trainers__slider-button--prev" type="button">
+                <button class="trainers__slider-button slider-navigation__button trainers__slider-button--prev slider-navigation__button--prev" type="button">
+                  <span class="visually-hidden">Назад</span>
                   <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false">
                     <path d="M17 1L0.999999 17L17 33"/>
                   </svg>
                 </button>
-                <button class="trainers__slider-button slider-navigation__button trainers__slider-button--next" type="button">
+                <button class="trainers__slider-button slider-navigation__button trainers__slider-button--next slider-navigation__button--next" type="button">
+                  <span class="visually-hidden">Вперёд</span>
                   <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false">
                     <path d="M1 1L17 17L1 33"/>
                   </svg>
@@ -606,12 +611,14 @@
               </div>
 
               <div class="reviews__slider-navigation slider-navigation">
-                <button class="reviews__slider-button slider-navigation__button reviews__slider-button--prev" type="button">
+                <button class="reviews__slider-button slider-navigation__button reviews__slider-button--prev slider-navigation__button--prev" type="button">
+                  <span class="visually-hidden">Предыдущий отзыв</span>
                   <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false">
                     <path d="M17 1L0.999999 17L17 33"/>
                   </svg>
                 </button>
-                <button class="reviews__slider-button slider-navigation__button reviews__slider-button--next" type="button">
+                <button class="reviews__slider-button slider-navigation__button reviews__slider-button--next slider-navigation__button--next" type="button">
+                  <span class="visually-hidden">Следующий отзыв</span>
                   <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false">
                     <path d="M1 1L17 17L1 33"/>
                   </svg>

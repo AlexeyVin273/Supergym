@@ -1,19 +1,30 @@
 .slider-navigation {
-  padding: 5px;
-
   user-select: none;
 }
 
 .slider-navigation__button {
-  padding: 0;
+  position: relative;
   margin: 0;
   border: 0;
   background-color: transparent;
 
-  width: 16px;
-  height: 32px;
-
   cursor: pointer;
+
+  &--prev {
+    padding: 40px 56px 40px 0;
+
+    @include vp-767 {
+      padding: 40px 32px 40px 0;
+    }
+  }
+
+  &--next {
+    padding: 40px 0 40px 56px;
+
+    @include vp-767 {
+      padding: 40px 0 40px 32px;
+    }
+  }
 
   @include vp-767 {
     width: 10px;
@@ -42,8 +53,24 @@
 }
 
 .slider-navigation__button svg {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  width: 18px;
+  height: 34px;
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+}
+
+.slider-navigation__button--prev svg {
+  left: 0;
+}
+
+.slider-navigation__button--next svg {
+  right: 0;
 }
 
 .slider-navigation__button svg path {

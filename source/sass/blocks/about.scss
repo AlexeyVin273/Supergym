@@ -6,12 +6,13 @@
 
   @include vp-1199 {
     flex-direction: column;
-    padding-top: 100px;
+    justify-content: flex-start;
+    padding-top: 102px;
     padding-bottom: 183px;
   }
 
   @include vp-767 {
-    padding-top: 70px;
+    padding-top: 64px;
     padding-bottom: 70px;
     padding-left: 0;
     padding-right: 0;
@@ -22,18 +23,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 85px;
-  margin-left: 60px;
+  margin: 9px 60px 0;
 
   @include vp-1199 {
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 50px;
+    justify-content: flex-start;
+    margin: 0 0 33px;
+    padding-right: 45px;
+    padding-left: 53px;
   }
 
   @include vp-767 {
     align-items: flex-start;
-    margin-bottom: 40px;
+    margin-bottom: 23px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -41,7 +42,7 @@
 
 .about__text h2 {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 8px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
@@ -50,15 +51,17 @@
   letter-spacing: 0.03em;
 
   @include vp-1199 {
-    margin-bottom: 6px;
+    margin-bottom: 0;
+    margin-right: 22px;
 
     font-size: 42px;
-    line-height: 50px;
+    line-height: 48px;
     text-align: center;
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-right: 0;
 
     font-size: 32px;
     line-height: 38px;
@@ -68,26 +71,27 @@
 
 .about__text strong {
   display: block;
-  margin-bottom: 48px;
+  margin-bottom: 35px;
 
   font-size: 18px;
 
   @include vp-1199 {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
 
     text-align: center;
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 
     text-align: left;
+    letter-spacing: -0.01em;
   }
 }
 
 .about__text p {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   font-weight: 300;
 
@@ -157,10 +161,6 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-
-  @include vp-767 {
-
-  }
 }
 
 .about__video {
@@ -213,8 +213,8 @@
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
 
-  width: 100px;
-  height: 100px;
+  width: 104px;
+  height: 104px;
   padding: 14px;
 
   border: 2px solid transparent;
@@ -236,26 +236,29 @@
 
   &::after {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left: 50%;
+    top: 50%;
+    width: 17px;
+    height: 17px;
+    transform: translate3d(-50%, -50%, 0);
 
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 13 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 7.5L0.249999 14.8612L0.25 0.138783L13 7.5Z' fill='white'/%3E%3C/svg%3E");
-    background-size: 17px 17px;
+    background-size: 13px 15px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right center;
 
     content: "";
 
     @include vp-1199 {
-      background-size: 12px 12px;
+      width: 12px;
+      height: 12px;
+      background-size: 9px 12px;
     }
   }
 
   @include vp-1199 {
-    width: 73px;
-    height: 73px;
+    width: 77px;
+    height: 77px;
     padding: 10px;
   }
 

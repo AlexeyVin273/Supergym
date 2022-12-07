@@ -9,11 +9,11 @@
 }
 
 .main-index__column {
-  flex: 1 1 50vw;
+  flex: 1 1 50%;
 
   display: flex;
 
   @include vp-1199 {
-    flex: 1 1 100vw;
+    flex: 1 1 100%;
   }
 }

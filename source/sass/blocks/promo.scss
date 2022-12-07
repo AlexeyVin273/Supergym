@@ -1,8 +1,8 @@
 .promo__inner {
   position: relative;
   display: flex;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 119px;
+  padding-bottom: 106px;
 
   @include vp-1199 {
     padding-top: 100px;
@@ -12,56 +12,40 @@
   @include vp-767 {
     flex-direction: column;
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 64px;
   }
 
   &::after {
     flex: 1 1 660px;
 
-    background-image: url('../../img/bg/promo-bg-desktop.jpg');
+    background-image: url("../img/bg/promo-bg-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     content: "";
 
-    @include vp-1199 {
-      // flex: 1 1 386px;
-    }
-
     @include vp-767 {
       flex: auto;
       width: 100%;
       padding-top: 100.69%;
-      background-image: url('../../img/bg/promo-bg-mobile.jpg');
+      background-image: url("../img/bg/promo-bg-mobile.jpg");
     }
 
     @include retina {
       @media (max-width: ($vp-768 - 1px)) {
-        background-image: url('../../img/bg/promo-bg-mobile@2x.jpg');
+        background-image: url("../img/bg/promo-bg-mobile@2x.jpg");
       }
 
       @media (min-width: $vp-768) {
-        background-image: url('../../img/bg/promo-bg-desktop@2x.jpg');
+        background-image: url("../img/bg/promo-bg-desktop@2x.jpg");
       }
     }
   }
 }
 
 .promo__info {
-  // position: relative;
   flex: 1 1 500px;
-
-  // &::before {
-  //   display: block;
-  //   padding-top: 100%;
-
-  //   content: "";
-
-  //   @include vp-767 {
-  //     display: none;
-  //   }
-  // }
 
   @include vp-767 {
     flex: auto;
@@ -70,12 +54,6 @@
 }
 
 .promo__info-content {
-  // position: absolute;
-  // position: relative;
-  // left: 0;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
   min-height: 500px;
 
   display: grid;
@@ -83,20 +61,19 @@
   grid-template-rows: repeat(3, auto) 1fr;
   align-content: center;
 
-  padding: 86px 79px;
+  padding: 83px 76px 86px 77px;
 
   background-color: $color-torch-red;
   color: $color-default-white;
 
   @include vp-1199 {
-    padding: 42.5px 50px;
+    padding: 45px 45px 52px;
     min-height: 292px;
   }
 
   @include vp-767 {
     position: relative;
-    padding: 50px 44px;
-
+    padding: 45px 44px 51px;
   }
 }
 
@@ -104,9 +81,7 @@
   grid-column: 1 / 2;
   grid-row: 1 / 3;
 
-  margin: 0;
-  margin-right: 50px;
-  margin-bottom: 35px;
+  margin: 2px 58px 27px 14px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
@@ -116,8 +91,7 @@
   text-transform: uppercase;
 
   @include vp-1199 {
-    margin-right: 30px;
-    margin-bottom: 14px;
+    margin: 5px 34px 10px 7px;
 
     font-size: 48px;
   }
@@ -128,12 +102,12 @@
   grid-row: 3 / 4;
 
   margin-top: 0;
-  margin-bottom: 55px;
+  margin-bottom: 30px;
 
   font-size: 18px;
 
   @include vp-1199 {
-    margin-bottom: 27px;
+    margin-bottom: 20px;
 
     font-size: 12px;
   }
@@ -145,13 +119,13 @@
 
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 
   display: flex;
   flex-direction: column;
 
   @include vp-1199 {
-    margin-bottom: 0;
+    margin-bottom: 3px;
   }
 }
 
@@ -159,14 +133,14 @@
   display: grid;
   grid-template-columns: min-content;
 
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 
   @include vp-1199 {
-    margin-bottom: 13px;
+    margin-bottom: 0;
   }
 
   @include vp-767 {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
   }
 
   &:last-child {
@@ -175,25 +149,31 @@
 }
 
 .promo__option-name {
+  margin-bottom: 8px;
+
   font-size: 18px;
+  line-height: 20px;
 
   @include vp-1199 {
+    margin-bottom: 0;
+
     font-size: 12px;
   }
 }
 
 .promo__option-value {
   margin: 0;
-  padding-top: 5px;
+  padding-top: 4px;
 
   display: grid;
   grid-template-columns: min-content auto;
   grid-template-rows: 14px 14px;
-  row-gap: 5px;
+  gap: 5px 2px;
 
   border-top: 1px solid $color-default-white;
 
   @include vp-1199 {
+    gap: 0;
     padding-top: 3px;
   }
 
@@ -230,7 +210,7 @@
   grid-column: 1 / -1;
   grid-row: 4 / 5;
 
-  padding: 23px;
+  padding: 24px;
   margin-top: auto;
 
   font-weight: 700;

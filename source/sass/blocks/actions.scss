@@ -1,21 +1,21 @@
 .actions__inner {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 117px;
 
   @include vp-1199 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 92px;
+    padding-bottom: 92px;
   }
 
   @include vp-767 {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 66px;
+    padding-bottom: 64px;
   }
 }
 
 .actions h2 {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
@@ -25,12 +25,16 @@
   text-align: center;
 
   @include vp-1199 {
+    margin-right: 10px;
+    margin-bottom: 40px;
+
     font-size: 42px;
     line-height: 50px;
   }
 
   @include vp-767 {
-    margin-bottom: 35px;
+    margin-bottom: 42px;
+    margin-right: 5px;
 
     font-size: 32px;
     line-height: 38px;
@@ -68,7 +72,7 @@
     &::after {
       flex: 0 0 50%;
 
-      background-image: url('../../img/bg/actions-bg-desktop.jpg');
+      background-image: url("../img/bg/actions-bg-desktop.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -78,27 +82,27 @@
       @include vp-1199 {
         flex-basis: 399px;
 
-        background-image: url('../../img/bg/actions-bg-tablet.jpg');
+        background-image: url("../img/bg/actions-bg-tablet.jpg");
       }
 
       @include vp-767 {
         flex: 1 1 299px;
         padding-top: 103.1%;
 
-        background-image: url('../../img/bg/actions-bg-mobile.jpg');
+        background-image: url("../img/bg/actions-bg-mobile.jpg");
       }
 
       @include retina {
         @media (max-width: ($vp-768 - 1px)) {
-          background-image: url('../../img/bg/actions-bg-mobile@2x.jpg');
+          background-image: url("../img/bg/actions-bg-mobile@2x.jpg");
         }
 
         @include vp-1199 {
-          background-image: url('../../img/bg/actions-bg-tablet@2x.jpg');
+          background-image: url("../img/bg/actions-bg-tablet@2x.jpg");
         }
 
         @media (min-width: $vp-1200) {
-          background-image: url('../../img/bg/actions-bg-desktop@2x.jpg');
+          background-image: url("../img/bg/actions-bg-desktop@2x.jpg");
         }
       }
     }
@@ -117,7 +121,7 @@
   flex-direction: column;
   align-items: flex-start;
 
-  padding: 45px;
+  padding: 41px 45px 45px;
   min-height: 462px;
 
   background-color: $color-torch-red;
@@ -130,7 +134,7 @@
 }
 
 .actions__main-action span {
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 
   font-weight: 700;
   font-size: 28px;
@@ -142,10 +146,10 @@
   font-size: 70px;
   line-height: 1;
 
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-bottom: 14px;
   }
 }
 
@@ -231,7 +235,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 28px;
+  padding: 23px 28px 28px;
 
   border: 7px solid $color-torch-red;
   border-image: $gradient-border 1;
@@ -242,12 +246,13 @@
 
   @include vp-767 {
     align-items: center;
+    padding: 35px 28px 39px;
   }
 }
 
 .actions__item h3 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 26px;
@@ -261,7 +266,7 @@
 .actions__item p {
   margin-top: 0;
   margin-bottom: 20px;
-  line-height: 1;
+  line-height: 1.4;
 
   @include vp-767 {
     text-align: center;

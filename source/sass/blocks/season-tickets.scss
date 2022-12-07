@@ -4,27 +4,24 @@
 
   &::before {
     position: absolute;
-    left: 84.8%;
-    bottom: -83px;
-    width: 321px;
-    height: 384px;
+    left: 79%;
+    bottom: -150px;
+    width: 470px;
+    height: 494px;
 
-    transform: rotate(320deg);
-
-
-    background-image: url('../img/bg/plates.png');
+    background-image: url("../img/bg/plates.png");
     background-size: contain;
     background-repeat: no-repeat;
 
     @include retina {
-      background-image: url('../img/bg/plates@2x.png');
+      background-image: url("../img/bg/plates@2x.png");
     }
 
     @include vp-1199 {
-      left: 63%;
-      bottom: -83px;
-      width: 289px;
-      height: 345px;
+      left: 54.5%;
+      bottom: -126px;
+      width: 540px;
+      height: 449px;
     }
 
     @include vp-767 {
@@ -46,14 +43,14 @@
   }
 
   @include vp-767 {
-    padding-top: 70px;
+    padding-top: 64px;
     padding-bottom: 70px;
   }
 }
 
 .season-tickets h2 {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 7px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
@@ -65,10 +62,13 @@
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
+    margin-right: 15px;
+    margin-bottom: 11px;
   }
 
   @include vp-767 {
-    margin-bottom: 35px;
+    margin-bottom: 12px;
+    margin-right: 10px;
 
     font-size: 32px;
     line-height: 38px;

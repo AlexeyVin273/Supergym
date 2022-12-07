@@ -1,20 +1,20 @@
 .review-card {
   display: grid;
   grid-template-columns: 80px 1fr;
-  padding: 62px;
-  gap: 25px 28px;
+  padding: 56px 55px 58px 62px;
+  gap: 14px 28px;
 
   background-color: $color-resolution-blue;
   color: $color-default-white;
 
   @include vp-1199 {
-    padding: 62px 65px;
+    padding: 56px 59px 56px 65px;
   }
 
   @include vp-767 {
     grid-template-columns: 84px 1fr;
-    gap: 20px 15px;
-    padding: 40px 25px;
+    gap: 16px 15px;
+    padding: 34px 25px 32px;
   }
 }
 
@@ -26,6 +26,8 @@
 
   width: 80px;
   height: 80px;
+  margin-top: 6px;
+
   border-radius: 50%;
   overflow: hidden;
 
@@ -59,6 +61,7 @@
 
   @include vp-767 {
     align-self: center;
+    margin-top: 5px;
   }
 }
 

@@ -10,40 +10,43 @@
 
   max-width: 600px;
   margin-left: auto;
-  padding: 56px 170px 70px 20px;
+  padding: 56px 168px 68px 20px;
   height: 100%;
 
   @include vp-1199 {
     max-width: 100%;
-    padding: 70px 163px 70px 133px;
+    padding: 62px 163px 68px 133px;
     margin-right: auto;
   }
 
   @include vp-767 {
-    padding: 70px 15px;
+    padding: 64px 15px 69px;
   }
 }
 
 .signup h2 {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   font-family: $ff-alumni-sans;
   font-weight: 600;
   font-size: 54px;
   line-height: 84px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 
   text-shadow:
-  0.5px 0.5px $color-default-white,
-  -0.5px -0.5px $color-default-white,
-  0.5px -0.5px $color-default-white,
-  -0.5px 0.5px $color-default-white;
+    0.5px 0.5px $color-default-white,
+    -0.5px -0.5px $color-default-white,
+    0.5px -0.5px $color-default-white,
+    -0.5px 0.5px $color-default-white;
 
   @include vp-1199 {
+    margin-bottom: 31px;
+
     font-weight: 700;
     font-size: 42px;
     line-height: 50px;
+    letter-spacing: 0.02em;
     text-shadow: none;
   }
 
@@ -60,7 +63,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
-  gap: 30px;
+  gap: 29px 30px;
+
+  @include vp-1199 {
+    gap: 29px 60px;
+  }
 
   @include vp-767 {
     grid-template-columns: 1fr;
@@ -71,7 +78,7 @@
 
 .signup__form input[type="text"],
 .signup__form input[type="tel"] {
-  padding: 10px 0;
+  padding: 7px 0;
 
   border: none;
   border-bottom: 1px solid $color-light-slate-grey;
@@ -80,6 +87,10 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 6px 0;
+  }
 
   &:focus {
     border-color: $color-default-white;
@@ -105,7 +116,7 @@
   margin-top: auto;
 
   display: inline-flex;
-  padding: 14px;
+  padding: 16px;
   align-items: center;
   justify-content: center;
 
@@ -122,6 +133,10 @@
   border: 3px solid $color-default-white;
   cursor: pointer;
   transition: box-shadow $trans-default;
+
+  @include vp-767 {
+    margin-top: 8px;
+  }
 
   &:disabled {
     opacity: 0.5;

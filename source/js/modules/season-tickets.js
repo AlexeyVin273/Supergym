@@ -56,4 +56,3 @@ const initTicketsTab = () => {
 };
 
 export {initTicketsTab};
-

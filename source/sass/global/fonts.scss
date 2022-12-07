@@ -1,17 +1,6 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Rouble";
-
-  font-display: swap;
-  src:
-    url("../fonts/rouble.woff2") format("woff2"),
-    url("../fonts/rouble.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
   font-family: "Roboto Condensed";
 
   font-display: swap;
@@ -62,15 +51,4 @@
   src:
     url("../fonts/AlumniSans-Bold.woff2") format("woff2"),
     url("../fonts/AlumniSans-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 800;
-  font-family: "Alumni Sans";
-
-  font-display: swap;
-  src:
-    url("../fonts/AlumniSans-ExtraBold.woff2") format("woff2"),
-    url("../fonts/AlumniSans-ExtraBold.woff") format("woff");
 }
