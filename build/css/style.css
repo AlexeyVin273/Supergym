@@ -1389,8 +1389,8 @@ button,
   transform: scale(1.2);
 }
 
-.about__video-button.focus-visible:focus circle {
-  stroke-opacity: 1;
+.about__video-button.focus-visible:focus svg {
+  opacity: 1;
 }
 
 .about__video-button:focus {
@@ -1407,13 +1407,11 @@ button,
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-.about__video-button circle {
-  -webkit-transition: stroke-opacity 0.3s ease;
-  -o-transition: stroke-opacity 0.3s ease;
-  transition: stroke-opacity 0.3s ease;
-  stroke-opacity: 0.2;
+  opacity: 0.2;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  z-index: 3;
 }
 
 .about__video-button.is-hidden {
@@ -1884,7 +1882,7 @@ button,
 }
 
 .trainers__inner {
-  max-width: 1317px;
+  max-width: 1312px;
 }
 
 .trainers h2 {
@@ -1900,7 +1898,7 @@ button,
 
 .trainers__slider-wrapper {
   position: relative;
-  padding: 0 59px;
+  padding: 0 56px;
 }
 
 .trainers__sliders-list {
@@ -2133,6 +2131,10 @@ button,
   transform: translate3d(0, -50%, 0);
   width: 18px;
   height: 34px;
+  stroke: #afafaf;
+  -webkit-transition: stroke 0.3s ease;
+  -o-transition: stroke 0.3s ease;
+  transition: stroke 0.3s ease;
 }
 
 .slider-navigation__button--prev svg {
@@ -2143,15 +2145,8 @@ button,
   right: 0;
 }
 
-.slider-navigation__button svg path {
-  stroke: #afafaf;
-  -webkit-transition: stroke 0.3s ease;
-  -o-transition: stroke 0.3s ease;
-  transition: stroke 0.3s ease;
-}
-
-.slider-navigation__button.swiper-button-disabled svg path,
-.slider-navigation__button:disabled svg path {
+.slider-navigation__button.swiper-button-disabled svg,
+.slider-navigation__button:disabled svg {
   stroke: rgba(175, 175, 175, 0.3);
 }
 
@@ -2334,7 +2329,7 @@ button,
 
 .actions__inner {
   padding-top: 120px;
-  padding-bottom: 117px;
+  padding-bottom: 118px;
 }
 
 .actions h2 {
@@ -2524,8 +2519,7 @@ button,
 }
 
 .reviews h2 {
-  margin-top: 0;
-  margin-bottom: 37px;
+  margin: 0 0 37px 10px;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
   font-size: 54px;
@@ -2568,7 +2562,7 @@ button,
   display: grid;
   -ms-grid-columns: 80px 1fr;
   grid-template-columns: 80px 1fr;
-  padding: 56px 55px 58px 62px;
+  padding: 56px 55px 56px 62px;
   gap: 14px 28px;
   background-color: #1c3374;
   color: #ffffff;
@@ -3469,8 +3463,7 @@ button,
   }
 
   .reviews h2 {
-    margin-right: 5px;
-    margin-bottom: 40px;
+    margin: 0 5px 40px 0;
     font-size: 42px;
     line-height: 50px;
   }
@@ -4215,8 +4208,8 @@ button,
     transform: scale(1.2);
   }
 
-  .about__video-button:hover:not(.focus-visible) circle {
-    stroke-opacity: 1;
+  .about__video-button:hover:not(.focus-visible) svg {
+    opacity: 1;
   }
 
   .tab-tickets__button:hover:not(.focus-visible):not(.is-active) {
@@ -4263,7 +4256,7 @@ button,
     transform: translate3d(0, 0, 0);
   }
 
-  .slider-navigation__button:hover:not(.focus-visible) svg path {
+  .slider-navigation__button:hover:not(.focus-visible) svg {
     stroke: #102654;
   }
 

@@ -37,7 +37,7 @@
   }
 
   @include hover {
-    & svg path {
+    & svg {
       stroke: $color-sapphire;
     }
   }
@@ -59,6 +59,9 @@
   width: 18px;
   height: 34px;
 
+  stroke: $color-dark-gray;
+  transition: stroke $trans-default;
+
   @include vp-767 {
     width: 10px;
     height: 19px;
@@ -73,13 +76,7 @@
   right: 0;
 }
 
-.slider-navigation__button svg path {
-  stroke: $color-dark-gray;
-
-  transition: stroke $trans-default;
-}
-
-.slider-navigation__button.swiper-button-disabled svg path,
-.slider-navigation__button:disabled svg path {
+.slider-navigation__button.swiper-button-disabled svg,
+.slider-navigation__button:disabled svg {
   stroke: rgba($color: $color-dark-gray, $alpha: 0.3);
 }
