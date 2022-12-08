@@ -11,28 +11,6 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <svg class="visually-hidden">
-      <symbol id="arrow-left" viewBox="0 0 18 34">
-        <g fill="none">
-          <path d="M17 1L0.999999 17L17 33"/>
-        </g>
-      </symbol>
-      <symbol id="arrow-right" viewBox="0 0 18 34">
-          <g fill="none">
-          <path d="M1 1L17 17L1 33"/>
-        </g>
-      </symbol>
-      <symbol id="ellipse" viewBox="0 0 100 100" fill="none">
-        <defs>
-          <linearGradient id="ellipse-gradient" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#ed0233"/>
-          <stop offset="1" stop-color="#003eb7"/>
-          </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r="49" stroke="url(#ellipse-gradient)" stroke-width="2"/>
-      </symbol>
-    </svg>
-
     <div class="wrapper">
 
       <!-- Header -->
@@ -108,8 +86,14 @@
 
                 <a class="about__video-button" href="media/about.mp4" target="_blank">
                   <span class="visually-hidden">Запустить видео</span>
-                  <svg width="100" height="100">
-                    <use xlink:href="#ellipse"></use>
+                  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="49" stroke="url(#ellipse-gradient)" stroke-width="2"/>
+                    <defs>
+                      <linearGradient id="ellipse-gradient" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#ED0233"/>
+                      <stop offset="1" stop-color="#003EB7"/>
+                      </linearGradient>
+                    </defs>
                   </svg>
                 </a>
               </div>
@@ -467,13 +451,13 @@
                 <button class="trainers__slider-button slider-navigation__button trainers__slider-button--prev slider-navigation__button--prev" type="button">
                   <span class="visually-hidden">Назад</span>
                   <svg width="18" height="34" aria-hidden="true" focusable="false">
-                    <use xlink:href="#arrow-left"></use>
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
                 </button>
                 <button class="trainers__slider-button slider-navigation__button trainers__slider-button--next slider-navigation__button--next" type="button">
                   <span class="visually-hidden">Вперёд</span>
                   <svg width="18" height="34" aria-hidden="true" focusable="false">
-                    <use xlink:href="#arrow-right"></use>
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
                   </svg>
                 </button>
               </div>
@@ -629,13 +613,13 @@
                 <button class="reviews__slider-button slider-navigation__button reviews__slider-button--prev slider-navigation__button--prev" type="button">
                   <span class="visually-hidden">Предыдущий отзыв</span>
                   <svg width="18" height="34" aria-hidden="true" focusable="false">
-                    <use xlink:href="#arrow-left"></use>
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
                 </button>
                 <button class="reviews__slider-button slider-navigation__button reviews__slider-button--next slider-navigation__button--next" type="button">
                   <span class="visually-hidden">Следующий отзыв</span>
                   <svg width="18" height="34" aria-hidden="true" focusable="false">
-                    <use xlink:href="#arrow-right"></use>
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
                   </svg>
                 </button>
               </div>
