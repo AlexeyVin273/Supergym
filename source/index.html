@@ -634,8 +634,14 @@
                 <h2>Бесплатное занятие</h2>
 
                 <form class="signup__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
-                  <input type="text" name="name" placeholder="Имя" required>
-                  <input type="tel" name="phone" placeholder="Телефон" pattern="[+]*(\d\s?)*" required>
+                  <label>
+                    <span class="visually-hidden">Имя</span>
+                    <input type="text" name="name" placeholder="Имя" required>
+                  </label>
+                  <label>
+                    <span class="visually-hidden">Телефон</span>
+                    <input type="tel" name="phone" placeholder="Телефон" pattern="[+]*(\d\s?)*" required>
+                  </label>
 
                   <button type="submit">отправить</button>
                 </form>
