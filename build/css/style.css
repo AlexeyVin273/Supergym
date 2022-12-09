@@ -1614,6 +1614,7 @@ button,
 
 .tab-tickets__tickets-item > b {
   margin-bottom: 65px;
+  font-weight: 400;
 }
 
 .tab-tickets__price {
