@@ -1,8 +1,12 @@
 .review-card {
   display: grid;
   grid-template-columns: 80px 1fr;
-  padding: 56px 55px 56px 62px;
   gap: 14px 28px;
+  align-content: center;
+
+  padding: 56px 55px 56px 62px;
+  min-height: 242px;
+  height: auto;
 
   background-color: $color-resolution-blue;
   color: $color-default-white;
@@ -15,6 +19,7 @@
     grid-template-columns: 84px 1fr;
     gap: 16px 15px;
     padding: 34px 25px 32px;
+    min-height: 335px;
   }
 }
 

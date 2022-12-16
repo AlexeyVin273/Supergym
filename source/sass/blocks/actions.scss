@@ -210,6 +210,8 @@
   flex-grow: 1;
   display: grid;
   grid-template-columns: 100%;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
   row-gap: 40px;
 
   margin: 0;
@@ -236,6 +238,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 23px 28px 28px;
+  min-height: 211px;
 
   border: 7px solid $color-torch-red;
   border-image: $gradient-border 1;

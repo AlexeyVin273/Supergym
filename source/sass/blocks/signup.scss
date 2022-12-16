@@ -7,6 +7,7 @@
 .signup__inner {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   max-width: 600px;
   margin-left: auto;
@@ -62,7 +63,7 @@
   flex-grow: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr;
+  align-content: start;
   gap: 29px 30px;
 
   @include vp-1199 {
@@ -118,7 +119,7 @@
 
 .signup__form button {
   grid-column: 1 / -1;
-  margin-top: auto;
+  // margin-top: auto;
 
   display: inline-flex;
   padding: 16px;

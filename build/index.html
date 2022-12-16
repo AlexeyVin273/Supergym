@@ -71,7 +71,7 @@
             <div class="about__media">
               <div class="about__image">
                 <picture>
-                  <source type="image/webp" media="(max-width: 320px)" srcset="img/main/gymnasium-mobile.webp 1x, img/main/gymnasium-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/main/gymnasium-mobile.webp 1x, img/main/gymnasium-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1199px)" srcset="img/main/gymnasium-tablet.webp 1x, img/main/gymnasium-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/main/gymnasium-desktop.webp 1x, img/main/gymnasium-desktop@2x.webp 2x">
 
@@ -261,6 +261,22 @@
           <div class="trainers__inner container">
             <h2>Тренеры</h2>
             <div class="trainers__slider-wrapper">
+
+              <div class="trainers__slider-navigation slider-navigation">
+                <button class="trainers__slider-button slider-navigation__button trainers__slider-button--prev slider-navigation__button--prev" type="button">
+                  <span class="visually-hidden">Назад</span>
+                  <svg width="18" height="34" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="trainers__slider-button slider-navigation__button trainers__slider-button--next slider-navigation__button--next" type="button">
+                  <span class="visually-hidden">Вперёд</span>
+                  <svg width="18" height="34" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+
               <div class="trainers__slider swiper">
                 <ul class="trainers__sliders-list swiper-wrapper">
                   <li class="trainers__sliders-item trainer-card swiper-slide" tabindex="0">
@@ -447,20 +463,7 @@
                 </ul>
               </div>
 
-              <div class="trainers__slider-navigation slider-navigation">
-                <button class="trainers__slider-button slider-navigation__button trainers__slider-button--prev slider-navigation__button--prev" type="button">
-                  <span class="visually-hidden">Назад</span>
-                  <svg width="18" height="34" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite.svg#arrow-left"></use>
-                  </svg>
-                </button>
-                <button class="trainers__slider-button slider-navigation__button trainers__slider-button--next slider-navigation__button--next" type="button">
-                  <span class="visually-hidden">Вперёд</span>
-                  <svg width="18" height="34" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite.svg#arrow-right"></use>
-                  </svg>
-                </button>
-              </div>
+
             </div>
           </div>
         </section>
@@ -681,22 +684,21 @@
       <!-- Main footer -->
       <footer class="main-footer">
         <div class="main-footer__inner container">
-          <a class="main-footer__logo-link logo-link">
-            <span class="visually-hidden">Фитнес центр "Supergym"</span>
-            <svg width="88" height="32">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-
           <ul class="main-footer__nav-list">
+            <li class="main-footer__nav-logo">
+              <a class="main-footer__logo-link logo-link">
+                <span class="visually-hidden">Фитнес центр "Supergym"</span>
+                <svg width="88" height="32">
+                  <use xlink:href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+            </li>
             <li class="main-footer__nav-item">
               <a class="main-footer__nav-link" href="#" >Услуги</a>
             </li>
             <li class="main-footer__nav-item">
               <a class="main-footer__nav-link" href="#" >Абонементы</a>
             </li>
-          </ul>
-          <ul class="main-footer__nav-list">
             <li class="main-footer__nav-item">
               <a class="main-footer__nav-link" href="#" >Акции</a>
             </li>

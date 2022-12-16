@@ -25,6 +25,13 @@ const initSliders = () => {
       nextEl: '.trainers__slider-button--next',
       prevEl: '.trainers__slider-button--prev',
     },
+
+    on: {
+      'afterInit': function () {
+        const duplicateSlides = document.querySelectorAll('.swiper-slide-duplicate');
+        duplicateSlides.forEach((duplicate) => duplicate.setAttribute('tabindex', '-1'));
+      },
+    },
   });
 
   const carousel = new Swiper('.reviews__slider', {
@@ -39,9 +46,7 @@ const initSliders = () => {
     },
   });
 
-  return () => {
-    return {slider, carousel};
-  };
+  return {slider, carousel};
 };
 
 export {initSliders};
