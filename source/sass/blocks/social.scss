@@ -1,11 +1,18 @@
 .social__list {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(auto-fit, 25px);
+  justify-content: end;
+  justify-items: end;
   gap: 11px;
 
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @include vp-767 {
+    justify-content: start;
+    justify-items: start;
+  }
 }
 
 .social__link {
