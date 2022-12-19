@@ -1,8 +1,8 @@
 .review-card {
   display: grid;
   grid-template-columns: 80px 1fr;
+  grid-template-rows: min-content auto;
   gap: 14px 28px;
-  align-content: center;
 
   padding: 56px 55px 56px 62px;
   min-height: 242px;

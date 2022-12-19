@@ -210,8 +210,6 @@
   flex-grow: 1;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr;
-  grid-auto-rows: 1fr;
   row-gap: 40px;
 
   margin: 0;
@@ -222,7 +220,6 @@
 
   @include vp-1199 {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(211px, max-content);
     gap: 30px;
   }
 
